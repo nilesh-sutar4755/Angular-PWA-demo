@@ -1,1 +1,52 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Loader starts */
+.overlay {
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .4);
+    z-index: 9999;
+}
+.overlay-white{
+    background-color: rgba(255, 255, 255, .4);
+}
+.spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* transform: translate(-50%, -50%); */
+}
+
+/* Safari 4.0 - 8.0 */
+
+@-webkit-keyframes spinner {
+    33.33% {
+        transform: rotate(120deg);
+    }
+    66.66% {
+        transform: rotate(240deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Standard syntax */
+
+@keyframes spinner {
+    33.33% {
+        transform: rotate(120deg);
+    }
+    66.66% {
+        transform: rotate(240deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Loader ends */

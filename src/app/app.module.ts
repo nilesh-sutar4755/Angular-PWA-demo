@@ -11,11 +11,13 @@ import { HomeComponent } from './components/home/home.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { LoaderService } from './shared/services/loader.service';
 import { HttpErrorInterceptor } from './shared/services/http-error-interceptor';
+import { LoaderComponent } from './components/global/loader/loader.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,
