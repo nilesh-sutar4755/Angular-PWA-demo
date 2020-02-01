@@ -1,0 +1,17 @@
+.icon-box {
+    display        : flex;
+    justify-content: center;
+    margin-top     : 40px;
+    align-items    : center;
+}
+
+.details-btn {
+    display    : flex;
+    align-items: flex-end;
+    height     : 100%;
+
+    i {
+        font-size     : 1.7rem;
+        vertical-align: bottom;
+    }
+}

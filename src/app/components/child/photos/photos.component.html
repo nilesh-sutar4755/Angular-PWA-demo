@@ -1,0 +1,44 @@
+<div class="row">
+  <div class="col-sm-3 mb-3" *ngFor="let item of photosArr; let i=index">
+    <div class="card h-100">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="image-box text-center">
+              <a href="javascript:void(0)" title="View Image" (click)="viewImage(item.url);" data-toggle="modal"
+                data-target="#myModal"> <img [src]="item.url" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <small class="card-title text-capitalize">{{item.title}}</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- The Modal -->
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Modal Heading</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <img [src]="imageUrl" alt="" class="img-fluid">
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="col-sm-6 mb-3" *ngFor="let item of commentsArr; let i=index">
+    <div class="card h-100">
+      <div class="card-body">
+        <div class="row">
+          <!--<div class="col-sm-2">
+            <div class="icon-box text-center">
+              <i class="fas fa-image fa-5x"></i>
+            </div>
+          </div>-->
+          <div class="col-sm-12">
+            <h4 class="card-title">{{item.name}}</h4>
+            <p>
+              <i class="fas fa-envelope mr-2"></i>
+              <a href="mailto:{{item.email}}">
+                {{item.email}}
+              </a>
+            </p>
+            <p>
+              {{item.body}}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
