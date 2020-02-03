@@ -12,7 +12,9 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { LoaderService } from './shared/services/loader.service';
 import { HttpErrorInterceptor } from './shared/services/http-error-interceptor';
 import { LoaderComponent } from './components/global/loader/loader.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+ 
+import { ToastrModule } from 'ngx-toastr';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +27,8 @@ import { LoaderComponent } from './components/global/loader/loader.component';
     HttpClientModule,
     AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
   ],
   providers: [CommonService,LoaderService,{
     provide: HTTP_INTERCEPTORS,
