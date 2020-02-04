@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { PostsComponent } from './components/child/posts/posts.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { HomeComponent } from './components/home/home.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 const routes: Routes = [
   {
@@ -14,6 +15,10 @@ const routes: Routes = [
   {
     path: "home",
     component: HomeComponent
+  },
+  {
+    path: "dashboard",
+    component: DashboardComponent
   },
   {
     path: "basemodule",

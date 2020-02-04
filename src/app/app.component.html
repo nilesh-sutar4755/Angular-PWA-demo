@@ -1,11 +1,14 @@
 <app-loader></app-loader>
-<nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+<nav class="navbar navbar-expand-md bg-blue navbar-dark fixed-top">
   <a class="navbar-brand" [routerLink]="['/']">JSON Placeholder</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
-    <ul class="navbar-nav">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" *ngIf="isLoggedIn">
+        <a class="nav-link" routerLinkActive="active" [routerLink]="['/dashboard']">Dashboard</a>
+      </li>
       <li class="nav-item">
         <a class="nav-link" routerLinkActive="active" [routerLink]="['/basemodule/users']">Users</a>
       </li>
@@ -17,6 +20,23 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" routerLinkActive="active" [routerLink]="['/basemodule/photos']">Photos</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
+      <li class="nav-item">
+        <a class="nav-link" href="javascript:void(0)" (click)="signIn('Google')">Login with Google</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="javascript:void(0)" (click)="signIn('FB')">Login with Facebook</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
+      <li class="nav-item">
+        <img [src]="userData.photoUrl" class="profile-pic" alt="Logo">
+        <span class="mt-2 ml-2 d-inline-block username"> {{userData.firstName + ' ' + userData.lastName}}</span>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="javascript:void(0)" (click)="signOut()">Logout</a>
       </li>
     </ul>
   </div>

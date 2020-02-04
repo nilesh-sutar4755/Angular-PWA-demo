@@ -3,23 +3,24 @@
 
 /* Loader starts */
 .overlay {
-    position: fixed;
-    display: block;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
+    position        : fixed;
+    display         : block;
+    width           : 100%;
+    height          : 100%;
+    top             : 0;
+    left            : 0;
     background-color: rgba(0, 0, 0, .4);
-    z-index: 9999;
+    z-index         : 9999;
 }
-.overlay-white{
+
+.overlay-white {
     background-color: rgba(255, 255, 255, .4);
 }
+
 .spinner {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    /* transform: translate(-50%, -50%); */
+    top     : 50%;
+    left    : 50%;
 }
 
 /* Safari 4.0 - 8.0 */
@@ -28,9 +29,11 @@
     33.33% {
         transform: rotate(120deg);
     }
+
     66.66% {
         transform: rotate(240deg);
     }
+
     100% {
         transform: rotate(360deg);
     }
@@ -42,12 +45,26 @@
     33.33% {
         transform: rotate(120deg);
     }
+
     66.66% {
         transform: rotate(240deg);
     }
+
     100% {
         transform: rotate(360deg);
     }
 }
 
 /* Loader ends */
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, .75);
+
+    &:hover {
+        color: #fff;
+    }
+}
+
+.username {
+    color: rgba(255, 255, 255, .75);
+}
